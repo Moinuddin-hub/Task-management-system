@@ -9,15 +9,13 @@ const Navbar = () => {
           <li className="px-4"> <NavLink to='/home'className={({isActive})=>
                 isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
                 Home</NavLink></li>
-         <li className="px-4"> <NavLink to='/'className={({isActive})=>
+         <li className="px-4"> <NavLink to='/viewTask'className={({isActive})=>
                 isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
-                Task</NavLink></li>
+                ViewTask</NavLink></li>
           <li className="px-4"> <NavLink to='/'className={({isActive})=>
                 isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
-                Task</NavLink></li>
-         <li className="px-4"> <NavLink to='/'className={({isActive})=>
-                isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
-                Task</NavLink></li>
+                Manage</NavLink></li>
+       
       
     </>
     return (
@@ -40,7 +38,7 @@ const Navbar = () => {
      {Menus}
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end ">
   <div className="">
         {
                         user?.email ?    <div className="flex items-center">

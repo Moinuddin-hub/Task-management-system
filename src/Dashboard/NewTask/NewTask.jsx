@@ -6,7 +6,7 @@ const NewTask = () => {
     const onSubmit = (data) =>{
         console.log(data);
     
-fetch('http://localhost:5000/users',{
+fetch('https://task-management-server-khaki-five.vercel.app/users',{
     method:"POST",
     headers:{
      "content-Type": "application/json"
@@ -15,11 +15,16 @@ fetch('http://localhost:5000/users',{
 })
 .then(res=>res.json())
 .then(data=>{
+
     console.log(data);
+    if(data.insertedId){
+        toast.success('Successfully added!')
+    }
 })
     }
     return (
        <div className=" ml-10 border mt-10">
+        <h2 className="text-4xl text-center font-bold">Create Task</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="my-8">
             <div className="flex items-center gap-10">
         <div className="form-control w-full max-w-xs">

@@ -13,7 +13,7 @@ const GoogleLogin = () => {
         media()
             .then(() => {
                 toast.success('User logged in successfully');
-                navigate('/')
+                navigate('/dashboard')
             })
             .catch(error => {
                 toast.error(error.message)

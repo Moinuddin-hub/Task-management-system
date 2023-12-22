@@ -28,7 +28,7 @@ const Dashboard = () => {
                         </div>
                 <li> <NavLink to="/dashboard/newTask">create new tasks</NavLink></li>
                 <li> <NavLink to="/dashboard/allTask">see previous tasks</NavLink></li>
-                <li> <NavLink to="/dashboard/users">Manage Users</NavLink></li>
+                <li> <NavLink to="/dashboard/todo">Drag-and-drop</NavLink></li>
                
         <div className="divider">OR</div>
         <li> <NavLink to="/home">Home page</NavLink></li>

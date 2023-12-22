@@ -6,6 +6,8 @@ import Register from "../Pages/Register";
 import Dashboard from "../Dashboard/Dashboard";
 import NewTask from "../Dashboard/NewTask/NewTask";
 import AllTask from "../Dashboard/AllTask/AllTask";
+import Todo from "../Dashboard/Todo/Todo";
+import ViewTask from "../Pages/ViewTask";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
       ,{
         path:'/register',
         element:<Register></Register>
+      },
+      {
+        path:'viewTask',
+        element:<ViewTask></ViewTask>,
+        loader:()=> fetch('https://task-management-server-khaki-five.vercel.app/users'),
       }
     ],
   },
@@ -37,7 +44,12 @@ const router = createBrowserRouter([
     {
         path:'allTask',
         element:<AllTask></AllTask>,
-        loader:()=> fetch('http://localhost:5000/users'),
+        loader:()=> fetch('https://task-management-server-khaki-five.vercel.app/users'),
+    },
+    {
+     path:'todo',
+     element:<Todo></Todo>,
+     loader:()=> fetch('https://task-management-server-khaki-five.vercel.app/users'),
     }
   ]
   },
